@@ -9,7 +9,7 @@ There are still many problems to be solved. I am still contacting the developer 
 
 Finally, blackarch is installed in VMware through live, which requires at least 90g space. After the installation, use script. When the script is used, please remember!!!!!!!
 
-######Find PAM in the system file / etc / pam.d/system-login_ tally.so This line of file has been commented out, it must be!! No!! Delete!! ######
+######Find system file /etc/pam.d/system-login   find the "pam_tally.so" This line of file has been commented out, Do not delete, Please “//” this line file!! ######
 
 The function of this file is to enable authentication. After restart, the user name and password will not be found. Be sure to create a snapshot!!
 
