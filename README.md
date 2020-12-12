@@ -20,6 +20,4 @@ chmod +x Blackarch.sh
 
 
 
-Finally, my English is not very good, I'm really sorry!!
-
 Good luck！！！！！！！！！！！！
