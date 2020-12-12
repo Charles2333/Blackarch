@@ -79,7 +79,8 @@ echo -e '\033[32m---------------------------------------\033[0m'
 
 #Install Package
 echo -e "\033[41m(3)Install basic packages!\033[0m"
-$IN -S open-vm-tools xf86-video-vmware mate-terminal netctl usbutils neofetch htop mate-terminal
+$IN -S open-vm-tools xf86-video-vmware mate-terminal  usbutils neofetch htop mate-terminal
+#Netctl was officially replaced with wifi-radar. No installation required
 $Sct enable vmware-vmblock-fuse.service
 $Sct enable vmtoolsd.server
 echo -e '\033[32m---------------------------------------\033[0m'
