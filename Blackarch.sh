@@ -17,6 +17,9 @@ GT=greatscottgadgets
 LB=libbtbb
 UT=ubertooth
 bd=build
+vvfs=vmware-vmblock-fuse.service
+vs=vmtoolsd.server
+
 function network()
 {
      local timeout=5
@@ -81,8 +84,10 @@ echo -e '\033[32m---------------------------------------\033[0m'
 echo -e "\033[41m(3)Install basic packages!\033[0m"
 $IN -S open-vm-tools xf86-video-vmware mate-terminal  usbutils neofetch htop mate-terminal
 #Netctl was officially replaced with wifi-radar. No installation required
-$Sct enable vmware-vmblock-fuse.service
-$Sct enable vmtoolsd.server
+$Sct start $vvfc
+$Sct start $vs
+$Sct enable $vvfc
+$Sct enable $vs
 echo -e '\033[32m---------------------------------------\033[0m'
 echo -e "\033[41m(4)Optimize related configuration!\033[0m"
 $IN -S pulseaudio
