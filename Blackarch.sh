@@ -19,6 +19,12 @@ UT=ubertooth
 bd=build
 vvfs=vmware-vmblock-fuse.service
 vs=vmtoolsd.server
+misc='acpi alsa-utils b43-fwcutter bash-completion bc cmake ctags expac
+  feh git gpm haveged hdparm htop inotify-tools ipython irssi
+  linux-atm lsof mercurial mesa mlocate moreutils mpv p7zip rsync
+  rtorrent screen scrot smartmontools strace tmux udisks2 unace unrar
+  unzip upower usb_modeswitch usbutils zip zsh mate-terminal open-vm-tools xf86-video-vmware'
+
 
 function network()
 {
@@ -82,7 +88,8 @@ echo -e '\033[32m---------------------------------------\033[0m'
 
 #Install Package
 echo -e "\033[41m(3)Install basic packages!\033[0m"
-$IN -S open-vm-tools xf86-video-vmware mate-terminal  usbutils neofetch htop mate-terminal
+$IN -S  $misc
+ 
 #Netctl was officially replaced with wifi-radar. No installation required
 $Sct start $vvfc
 $Sct start $vs
