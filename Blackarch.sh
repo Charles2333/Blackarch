@@ -71,6 +71,9 @@ echo -e "\033[34m-------------------Clear!!!!--------------------\033[0m"
 sleep 3s
 clear
 
+<<'COMMENT'
+In blackarch system of (2020-12-01), GPG is installed automatically when the system is installed, and there is no need to install it again. 
+The following is suitable for (2020-12-06) version.
 #Installing KEY
 echo -e '\033[32m----------------------------------------\033[0m'
 echo -e "\033[41m(2)Installing on top of Archlinux!\033[0m"
@@ -85,7 +88,7 @@ else
   echo "File exists and directory!"
 fi
 echo -e '\033[32m---------------------------------------\033[0m'
-
+COMMENT
 #Install Package && Setting Gqrx
 echo -e "\033[41m(3)Install basic packages!\033[0m"
 $IN -S  $misc
