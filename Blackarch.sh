@@ -190,4 +190,8 @@ cd $UT/host
 mkdir $bd &&  cd $bd
 cmake .. && make && sudo make install
 fi
+echo "******************Cleaning up redundant software installation packages***************************"
+cd /var/cache/pacman/pkg
+rm *
+
 echo "----------OVER!---------"
