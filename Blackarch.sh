@@ -89,17 +89,17 @@ echo -e '\033[32m---------------------------------------\033[0m'
 #Install Package && Setting Gqrx
 echo -e "\033[41m(3)Install basic packages!\033[0m"
 $IN -S  $misc
-sleep 3s
-echo -e "\033[36mAbout the error gqrx: "pulseaudio error connection used"!\033[0m"
-$IN -S pulseaudio
-pulseaudio -D
 #Netctl was officially replaced with wifi-radar. No installation required
 $Sct start $vvfc
 $Sct start $vs
 $Sct enable $vvfc
 $Sct enable $vs
 echo -e '\033[32m---------------------------------------\033[0m'
-echo -e "\033[41m(4)Optimize related configuration!\033[0m"
+echo -e "\033[41m(4)Optimize related configuration,About the error gqrx: "pulseaudio error connection used"!\033[0m"
+$IN -S pulseaudio gqrx
+pulseaudio -D #Make sure gqrx is installed:
+echo "Complete, please run gqrx to test！"
+sleep 3s
 $IN -S pulseaudio gqrx
 pulseaudio -D #Make sure gqrx is installed:
 echo "Complete, please run gqrx to test！"
@@ -107,7 +107,9 @@ sleep 3s
 echo "##############Install Chinese language#############"
 $IN -S wqy-zenhei ttf-fireflysung
 locale-gen && locale && locale -a
-
+<<'COMMENT'
+In blackarch system of (2020-12-01), the wireless interface of wls35u1 is cancelled. 
+The original interface is changed to the same WLAN0 interface as Kali. The following version is suitable for (2020-12-06).
 #about wifi_menu error
 #Test network interface
 echo -e '\033[32m---------------------------------------\033[0m'
@@ -133,7 +135,7 @@ if [ $? -eq 0 ]; then
 else
   echo "wifi_menu ok!"
 fi
-
+COMMENT
 #Network speed test
 echo -e '\033[32m---------------------------------------\033[0m'
 echo -e "\033[41m(6)Network speed test!\033[0m"
