@@ -192,5 +192,5 @@ cmake .. && make && sudo make install
 fi
 echo "******************Cleaning up redundant software installation packages***************************"
 sleep 5s
-xterm -T " Clear " -geometry 100x30 -e " rf -f /var/cache/pacman/pkg/* "
+xterm -T " Clear " -geometry 100x30 -e " rm -f /var/cache/pacman/pkg/* "
 echo "----------OVER!---------"
