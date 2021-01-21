@@ -19,3 +19,4 @@ chmod +x Blackarch.sh
 ！！Chinese characters are used in the font setting part of the current script！！
 
 Good luck！！！！！！！！！！！！
+Blackarchs.sh uses menu selection
