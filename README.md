@@ -1,7 +1,6 @@
 # Blackarch
 I like blackarch operating system very much, but it has a lot of problems. I wrote a script in the materials, and wrote the missing software package and tools into shell.
 
-My shell doesn't write very well. It's not fully automated.
 
 
 Finally, blackarch is installed in VMware through live, which requires at least 90g space. After the installation, use script. When the script is used, please remember!!!!!!!
